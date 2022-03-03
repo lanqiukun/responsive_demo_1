@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 设置设计稿的像素宽度 -->
+    <script>
+        function set_rem() {
+            var draft_pixel_width = 750     // 设计稿的像素宽度
+            var html = document.documentElement
+            html.style.fontSize =  html.clientWidth / draft_pixel_width + 'px'
+        }
+
+        set_rem()
+        
+        window.addEventListener('resize', set_rem)
+
+        
+        window.addEventListener('pageshow', function (e) {
+            if (e.persisted) 
+                set_rem()
+        })
+    </script>
+
+</head>
+<body>
+    <div class="header">
+        <img src="asset/logo.png" alt="">
+    </div>
+
+    <div class="title">
+        车号定制，让您选到心仪号
+    </div>
+
+    <div class="wenan">
+        对子号|顺子号|生日号|吉祥号|领导号|豹子号
+    </div>
+
+    <div class="tips">
+        专业选号|十年经验|在线一对一服务
+    </div>
+
+    <img src="asset/qrcode.jpg" class="qrcode" alt="">
+
+    <div class="add_client_service">扫码添加客服微信免费咨询可选号段</div>
+
+    <button class="copy_btn">点击复制微信号</button>
+
+    <img src="asset/qiche.png" class="car_icon" alt="">
+
+    
+</body>
+</html>
